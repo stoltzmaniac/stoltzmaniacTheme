@@ -1,76 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    {{!-- Page Meta --}}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
 
+    {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" type="text/css" href="{{asset "css/highlight/styles/railscasts.css"}}">
-    <script type="text/javascript" src="{{asset "css/highlight/highlight.pack.js"}}"></script>
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    
-    {{! Ghost outputs important style and meta data with this tag }}
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
+<body class="{{body_class}} nav-closed">
 
-<body class="{{body_class}}">
-  <div id="content">
+    {{!-- The blog navigation links --}}
+    {{navigation}}
 
-    <!--NOTE(eugenek): Left side bar follows -->
-    <div id="content-left">
-    <div class="vertical">
-    <div class="side-bar">
+    <div class="site-wrapper">
 
-        <div class="blog-title-wrap">
-        {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-        <h1 class="blog-title blog-title-text"><a class="blog-title-link" href="{{@blog.url}}">{{@blog.title}}</a></h1>
-        </div>
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
 
-        <div class="blog-description-wrap">
-        <h2 class="blog-description">{{@blog.description}}</h2>
-        </div>
-
-        {{navigation}}
-       
-        <div class="latest-10-posts-wrap">
-        <h1 class="latest-10-posts-title">Latest Posts</h1>
-        </div>
-
-        {{> latest_10_posts}}
+        {{!-- The tiny footer at the very bottom --}}
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
 
     </div>
-    </div>
-    </div>
 
-    {{! Everything else gets inserted here }}
-    {{{body}}}
-
-    <!--NOTE(eugenek): Site-wide Footer -->
-    <footer class="site-footer">
-        <a class="subscribe icon-feed" href="{{@blog.url}}/rss/"><span class="tooltip">Subscribe!</span></a>
-        <div class="">
-             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2015 &bull; All rights reserved.</section>
-             <section class="poweredby">
-               <a href="https://github.com/eugenekolo/cozy-youth-theme">Cozy Youth</a> forked from Kolotheme by 
-               <a href="http://twitter.com/@eugenekolo">@eugenekolo</a></section>
-        </div>
-    </footer>
-
-    {{! Ghost outputs important scripts and data with this tag }}
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
-
-    {{! The main JavaScript file for Casper }}
+    {{!-- Fitvids makes video embeds responsive and awesome --}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    {{!-- Prism JavaScript for code syntax highlighting --}}
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
 
-  </div>
 </body>
 </html>

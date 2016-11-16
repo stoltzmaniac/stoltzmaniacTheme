@@ -1,38 +1,16 @@
-cozy-youth-theme
-=======
-A light cozy ghost blog theme for developers.
+# Casper
 
-The following may or may not be features you desire, but they are what I like about this theme.
+The default theme for [Ghost](http://github.com/tryghost/ghost/).
 
-Features:
-* Lists blogs on the front page. No splash screen.
-* Crisp font
-* Side bar showing latest 10 posts
-* Side bar showing pages you make, such as 'about me'
-* Interesting textured background
-* Syntax highlighting for code
-* Sweet RSS pop-up
-* Some share buttons on post pages
-* Mobile friendly
+To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
-Demo: https://www.eugenekolo.com
+## Copyright & License
 
-## Screenshots
-![Screen shot of blog 1](http://i.imgur.com/fDwJ6dB.png)
+Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
 
-![Screenshot of blog 2](http://i.imgur.com/ho4MDYe.png)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Installation
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-```
-cd /path/to/your/ghost/blog/themes 
-git clone https://github.com/eugenekolo/cozy-youth-theme.git
-then select the theme 'cozy-youth' from your Ghost admin panel
-```
-
-or you can download the ZIP of this repo and extract it into your ghost blog themes directory.
-
-Note 1: You need to have "Public API" enabled from the Admin panel for some of the features (e.g. latest post listings) to work. 
-
-## License
-MIT License. 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
